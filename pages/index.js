@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Date from '../components/Date';
 import Layout, {siteTitle} from '../components/Layout';
 import utilStyles from '../styles/utils.module.css';
@@ -33,6 +34,9 @@ export default function Home({allPostsData}) {
           ))}
         </ul>
       </section>
+      <div>
+        <Image src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="1260px" height="750px" />
+      </div>
     </Layout>
   )
 }
