@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "postinstall": "next build"
+    "start": "node server"
   },
   "dependencies": {
     "date-fns": "^2.16.1",
