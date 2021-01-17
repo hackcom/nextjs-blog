@@ -11,6 +11,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.use('/.well-known/acme-challenge', express.static('/home/site/wwwroot/.well-known/acme-challenge'));
     server.get('*', (req, res) => handle(req, res));
     server.listen(port, err => {
       if(err) throw err;
