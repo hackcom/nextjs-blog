@@ -11,6 +11,8 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    console.log('__dirname:', __dirname);
+    console.log('process.cwd():', process.cwd());
     server.use('/.well-known/acme-challenge', express.static('/home/site/wwwroot/.well-known/acme-challenge', {dotfiles: 'allow'}));
     server.get('*', (req, res) => handle(req, res));
     server.listen(port, err => {
